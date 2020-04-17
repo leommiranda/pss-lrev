@@ -3,11 +3,11 @@ import sklearn.metrics as sklm
 import fasttext
 import numpy as np
 
-from keras.utils import Sequence
-from keras.models import Sequential, Model
-from keras.layers import *
-from keras.utils import *
-from keras.callbacks import ModelCheckpoint, Callback
+from tensorflow.keras.utils import Sequence
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import *
+from tensorflow.keras.utils import *
+from tensorflow.keras.callbacks import ModelCheckpoint, Callback
 
 
 nb_embedding_dims = 300 # ft.get_dimension()

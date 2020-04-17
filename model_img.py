@@ -3,15 +3,15 @@ import sklearn.metrics as sklm
 import fasttext
 import numpy as np
 
-from keras.preprocessing.image import img_to_array, load_img
-from keras.applications.vgg16 import VGG16
-from keras.applications.vgg16 import preprocess_input
-from keras.optimizers import Nadam, Adam, RMSprop
-from keras.utils import Sequence
-from keras.models import Sequential, Model
-from keras.layers import *
-from keras.utils import *
-from keras.callbacks import ModelCheckpoint, Callback
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.optimizers import Nadam, Adam, RMSprop
+from tensorflow.keras.utils import Sequence
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import *
+from tensorflow.keras.utils import *
+from tensorflow.keras.callbacks import ModelCheckpoint, Callback
 
 # import image_slicer
 # n_slices = 6
