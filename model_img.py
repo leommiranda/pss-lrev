@@ -1,6 +1,6 @@
 import csv, re, math
 import sklearn.metrics as sklm
-import fastText
+import fasttext
 import numpy as np
 
 from keras.preprocessing.image import img_to_array, load_img
