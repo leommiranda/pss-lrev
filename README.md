@@ -1,2 +1,2 @@
 # pss-lrev
-Multi-modal Page stream segmation with Convolutional Neural Networks
+Multi-modal page stream segmentation with convolutional neural networks
