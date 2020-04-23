@@ -296,9 +296,9 @@ def compile_model_prevpage(include_top = True, print_summary = False):
 
 def predict(model, data, prev_page_generator = False, batch_size=256):
     if prev_page_generator:
-        y_predict = np.round(model.predict_generator(TextFeatureGenerator2(data, batch_size=batch_size)))
+        y_predict = np.round(model.predict(TextFeatureGenerator2(data, batch_size=batch_size)))
     else:
-        y_predict = np.round(model.predict_generator(TextFeatureGenerator(data, batch_size=batch_size)))
+        y_predict = np.round(model.predict(TextFeatureGenerator(data, batch_size=batch_size)))
     return y_predict
 
 

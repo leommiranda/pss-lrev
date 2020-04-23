@@ -408,13 +408,13 @@ def compile_model_text_image(img_dim, n_classes, print_summary = False):
     
 def predict(model, data, img_dim, prev_page_generator = False, batch_size=32):
     if prev_page_generator == "image+text":
-        y_predict = model.predict_generator(ImageTextFeatureGenerator(data, img_dim, batch_size=batch_size)).argmax(axis=-1)
+        y_predict = model.predict(ImageTextFeatureGenerator(data, img_dim, batch_size=batch_size)).argmax(axis=-1)
     elif prev_page_generator == "slices":
-        y_predict = np.round(model.predict_generator(ImageFeatureGenerator(data, img_dim, slices=True, batch_size=batch_size)))
+        y_predict = np.round(model.predict(ImageFeatureGenerator(data, img_dim, slices=True, batch_size=batch_size)))
     elif prev_page_generator:
-        y_predict = np.round(model.predict_generator(ImageFeatureGenerator(data, img_dim, prevpage=True, batch_size=batch_size)))
+        y_predict = np.round(model.predict(ImageFeatureGenerator(data, img_dim, prevpage=True, batch_size=batch_size)))
     else:
-        y_predict = np.round(model.predict_generator(ImageFeatureGenerator(data, img_dim, prevpage=False, batch_size=batch_size)))
+        y_predict = np.round(model.predict(ImageFeatureGenerator(data, img_dim, prevpage=False, batch_size=batch_size)))
     
     return y_predict
 
